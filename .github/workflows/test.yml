@@ -14,16 +14,23 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '16'
-          cache: 'npm'
+          cache: 'yarn'
 
       - name: Install dependencies
-        run: npm ci
+        run: yarn
 
       - name: Run linter
-        run: npm run lint
+        run: yarn run lint
 
       - name: Run unit tests
-        run: npm test
+        run: yarn test
 
       - name: Run integration tests
-        run: npm run cypress
+        run: yarn run cypress
+
+      - name: Merge code coverage reports
+        run: yarn run test:coverage
+
+      - name: Danger
+        run: yarn danger ci
+        env: GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
