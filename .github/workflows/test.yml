@@ -23,13 +23,13 @@ jobs:
         run: yarn run lint
 
       - name: Run unit tests
-        run: yarn test
+        run: yarn test --coverage --watchAll=false
 
       - name: Run integration tests
         run: yarn run cypress
 
       - name: Merge code coverage reports
-        run: yarn run test:coverage
+        run: yarn run test:merge-coverage
 
       - name: Danger
         run: yarn danger ci

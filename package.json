@@ -52,6 +52,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "test:coverage": "react-scripts test --coverage --watchAll=false && yarn cypress:run && node ./scripts/coverage-merge.js && nyc report",
+    "test:merge-coverage": "node ./scripts/coverage-merge.js",
     "lint": "eslint ./src ./cypress --ext .ts,.tsx",
     "lint:fix": "eslint ./src ./cypress --ext .ts,.tsx --fix",
     "stylelint": "stylelint '**/*.scss'",
