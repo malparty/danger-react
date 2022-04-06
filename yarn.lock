@@ -4653,6 +4653,13 @@ danger-plugin-code-coverage@^1.1.9:
     lodash "^4.17.15"
     markdown-table "^2.0.0"
 
+danger-plugin-istanbul-coverage@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/danger-plugin-istanbul-coverage/-/danger-plugin-istanbul-coverage-1.6.2.tgz#fdee00265b148afdf64e74229652e30bbe96236d"
+  integrity sha512-VRbZPQjSLAfgR8n0mK1d4yO36kuO1TJ8/4E+6+daT7YwHJzANjFQ6qYZBbkQgXscwYHLiAQ11slmRFpGQBHVmg==
+  dependencies:
+    lodash "^4.17.5"
+
 danger-plugin-jest-codecov@^0.0.8:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/danger-plugin-jest-codecov/-/danger-plugin-jest-codecov-0.0.8.tgz#e67d617586e4a7d5ddb77c32fcf5fe50843d0e26"
