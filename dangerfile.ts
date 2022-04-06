@@ -1,6 +1,6 @@
-import { schedule, danger } from 'danger';
+import { schedule } from 'danger';
 import { istanbulCoverage } from 'danger-plugin-istanbul-coverage';
-import { codeCoverage, PluginOptions } from 'danger-plugin-code-coverage';
+// import { codeCoverage, PluginOptions } from 'danger-plugin-code-coverage';
 
 // MAYBE LOOK AT FILE PATH: RELATIVE? ABSOLUTE? WHERE IS THE APP?
 // const defaultPluginOptions: PluginOptions[] = [
@@ -12,9 +12,7 @@ import { codeCoverage, PluginOptions } from 'danger-plugin-code-coverage';
 //   },
 // ];
 
-
 // codeCoverage(defaultPluginOptions);
-
 
 schedule(
   istanbulCoverage({
@@ -33,9 +31,9 @@ schedule(
     // The location of the istanbul coverage file.
     // coveragePath: './.nyc_output/out.json', // The merged JSON coverage data
     // Alternatively, if you have multiple coverage summaries, you can merge them into one report
-    // coveragePaths: ["./dir1/coverage-summary.json", "./dir2/coverage-summary.json"]
+    coveragePaths: ["./coverage/reports/from-cypress.json", "./coverage/reports/from-jest.json"],
     // You can also specify the format, instead of letting it be inferred from the file name
-    coveragePath: { path: './coverage/merged/lcov.info', type: 'lcov' /* ||  "json-summary" */ },
+    // coveragePath: { path: './coverage/merged/lcov.info', type: 'lcov' /* ||  "json-summary" */ },
 
     // Which set of files to summarise from the coverage file.
     reportFileSet: 'all', // || "modified" || "created" || "createdOrModified"
