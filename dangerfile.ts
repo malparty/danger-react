@@ -1,6 +1,6 @@
 import { jestCodecov } from 'danger-plugin-jest-codecov';
 
-jestCodecov('./coverage/merged/lcov-report/index.html');
+jestCodecov();
 
 // import { codeCoverage, PluginOptions } from 'danger-plugin-code-coverage';
 
