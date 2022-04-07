@@ -31,9 +31,9 @@ schedule(
     // The location of the istanbul coverage file.
     // coveragePath: './.nyc_output/out.json', // The merged JSON coverage data
     // Alternatively, if you have multiple coverage summaries, you can merge them into one report
-    coveragePaths: ["./coverage/reports/from-cypress.json", "./coverage/reports/from-jest.json"],
+    // coveragePaths: ["./coverage/reports/from-cypress.json", "./coverage/reports/from-jest.json"],
     // You can also specify the format, instead of letting it be inferred from the file name
-    // coveragePath: { path: './coverage/merged/lcov.info', type: 'lcov' /* ||  "json-summary" */ },
+    coveragePath: { path: './coverage/merged/lcov.info', type: 'lcov' /* ||  "json-summary" */ },
 
     // Which set of files to summarise from the coverage file.
     reportFileSet: 'all', // || "modified" || "created" || "createdOrModified"
