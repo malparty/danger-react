@@ -1606,7 +1606,7 @@
     node-fetch "^2.6.7"
     universal-user-agent "^6.0.0"
 
-"@octokit/rest@^16.43.0 || ^17.11.0 || ^18.12.0", "@octokit/rest@^18.12.0":
+"@octokit/rest@^16.43.0 || ^17.11.0 || ^18.12.0":
   version "18.12.0"
   resolved "https://registry.yarnpkg.com/@octokit/rest/-/rest-18.12.0.tgz#f06bc4952fc87130308d810ca9d00e79f6988881"
   integrity sha512-gDPiOHlyGavxr72y0guQEhLsemgVjwRePayJ+FcKc2SJqKUbxbkvf5kAZEWA/MKvsfYlQAMVzNJE3ezQcxMJ2Q==
@@ -4653,6 +4653,13 @@ danger-plugin-code-coverage@^1.1.9:
     lodash "^4.17.15"
     markdown-table "^2.0.0"
 
+danger-plugin-istanbul-coverage@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/danger-plugin-istanbul-coverage/-/danger-plugin-istanbul-coverage-1.6.2.tgz#fdee00265b148afdf64e74229652e30bbe96236d"
+  integrity sha512-VRbZPQjSLAfgR8n0mK1d4yO36kuO1TJ8/4E+6+daT7YwHJzANjFQ6qYZBbkQgXscwYHLiAQ11slmRFpGQBHVmg==
+  dependencies:
+    lodash "^4.17.5"
+
 danger-plugin-jest-codecov@^0.0.8:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/danger-plugin-jest-codecov/-/danger-plugin-jest-codecov-0.0.8.tgz#e67d617586e4a7d5ddb77c32fcf5fe50843d0e26"
@@ -4663,7 +4670,7 @@ danger-plugin-jest-codecov@^0.0.8:
   optionalDependencies:
     esdoc "^1.1.0"
 
-danger@^10.1.1:
+danger@10.9.0, danger@^10.1.1:
   version "10.9.0"
   resolved "https://registry.yarnpkg.com/danger/-/danger-10.9.0.tgz#0a5f6eae76029257f23246e2fb922cf401ac55ee"
   integrity sha512-eEWQAaIPfWSfzlQiFx+w9fWuP3jwq8VAV9W22EZRxfmCBnkdDa5aN0Akr7lzfCKudzy+4uEmIGUtxnYeFgTthQ==
@@ -4690,48 +4697,6 @@ danger@^10.1.1:
     lodash.mapvalues "^4.6.0"
     lodash.memoize "^4.1.2"
     memfs-or-file-map-to-github-branch "^1.1.0"
-    micromatch "^4.0.4"
-    node-cleanup "^2.1.2"
-    node-fetch "^2.6.7"
-    override-require "^1.1.1"
-    p-limit "^2.1.0"
-    parse-diff "^0.7.0"
-    parse-git-config "^2.0.3"
-    parse-github-url "^1.0.2"
-    parse-link-header "^2.0.0"
-    pinpoint "^1.1.0"
-    prettyjson "^1.2.1"
-    readline-sync "^1.4.9"
-    require-from-string "^2.0.2"
-    supports-hyperlinks "^1.0.1"
-
-danger@^11.0.2:
-  version "11.0.2"
-  resolved "https://registry.yarnpkg.com/danger/-/danger-11.0.2.tgz#245b65aaf26c9b5eb3d0c65fcd403b5c31782138"
-  integrity sha512-TKE5E1Zrb0uV7Ft3mhbTA3bwVf4hZs7DVx6Mo8weVdIcaXJIIle3+aCjn259GX9/pF4ewoYuof7eLRPJligOgA==
-  dependencies:
-    "@babel/polyfill" "^7.2.5"
-    "@octokit/rest" "^18.12.0"
-    async-retry "1.2.3"
-    chalk "^2.3.0"
-    commander "^2.18.0"
-    debug "^4.1.1"
-    fast-json-patch "^3.0.0-1"
-    get-stdin "^6.0.0"
-    gitlab "^10.0.1"
-    http-proxy-agent "^2.1.0"
-    https-proxy-agent "^2.2.1"
-    hyperlinker "^1.0.0"
-    json5 "^2.1.0"
-    jsonpointer "^5.0.0"
-    jsonwebtoken "^8.4.0"
-    lodash.find "^4.6.0"
-    lodash.includes "^4.3.0"
-    lodash.isobject "^3.0.2"
-    lodash.keys "^4.0.8"
-    lodash.mapvalues "^4.6.0"
-    lodash.memoize "^4.1.2"
-    memfs-or-file-map-to-github-branch "^1.2.1"
     micromatch "^4.0.4"
     node-cleanup "^2.1.2"
     node-fetch "^2.6.7"
@@ -8689,7 +8654,7 @@ media-typer@0.3.0:
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
 
-memfs-or-file-map-to-github-branch@^1.1.0, memfs-or-file-map-to-github-branch@^1.2.1:
+memfs-or-file-map-to-github-branch@^1.1.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/memfs-or-file-map-to-github-branch/-/memfs-or-file-map-to-github-branch-1.2.1.tgz#fdb9a85408262316a9bd5567409bf89be7d72f96"
   integrity sha512-I/hQzJ2a/pCGR8fkSQ9l5Yx+FQ4e7X6blNHyWBm2ojeFLT3GVzGkTj7xnyWpdclrr7Nq4dmx3xrvu70m3ypzAQ==

@@ -1,6 +1,6 @@
 name: Test
 
-on: push
+on: pull_request
 
 jobs:
   test:
@@ -23,14 +23,16 @@ jobs:
         run: yarn run lint
 
       - name: Run unit tests
-        run: yarn test
+        run: yarn test --coverage
 
       - name: Run integration tests
         run: yarn run cypress
 
       - name: Merge code coverage reports
-        run: yarn run test:coverage
+        run: yarn run test:merge-coverage
 
       - name: Danger
         run: yarn danger ci
-        env: GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}

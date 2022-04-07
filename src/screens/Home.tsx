@@ -6,6 +6,10 @@ import logo from 'assets/images/logo.svg';
 const HomeScreen = (): JSX.Element => {
   const { t } = useTranslation();
 
+  const unCoveredFunction = (message: string): string => {
+    return `You said: ${message}`;
+  };
+
   return (
     <div className="app">
       <header className="app-header">
@@ -15,6 +19,7 @@ const HomeScreen = (): JSX.Element => {
           {t('sample_page.learn_react')}
         </a>
       </header>
+      {!t && unCoveredFunction('Hello World!')}
     </div>
   );
 };
