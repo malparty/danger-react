@@ -31,11 +31,6 @@ jobs:
       - name: Merge code coverage reports
         run: yarn run test:merge-coverage
 
-      - uses: actions/upload-artifact@v3
-        with:
-          name: code-coverage.json
-          path: ./.nyc_output/out.json
-
       - name: Danger
         run: yarn danger ci
         env:

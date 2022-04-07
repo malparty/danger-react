@@ -1,17 +1,22 @@
-// import { schedule } from 'danger';
-// import { istanbulCoverage } from 'danger-plugin-istanbul-coverage';
-import { codeCoverage, PluginOptions } from 'danger-plugin-code-coverage';
+import { jestCodecov } from 'danger-plugin-jest-codecov';
 
-const defaultPluginOptions: PluginOptions[] = [
-  {
-    title: '# Coverage',
-    ignoreCoveragePattern: ['.test.', '.snap'],
-    // coverageFilesPath: '.nyc_output/out.json',
-    coverageFilesPath: './.nyc_output/out.json',
-  },
-];
+jestCodecov('./coverage/merged/lcov-report/index.html');
 
-codeCoverage(defaultPluginOptions);
+// import { codeCoverage, PluginOptions } from 'danger-plugin-code-coverage';
+
+// const defaultPluginOptions: PluginOptions[] = [
+//   {
+//     title: '# Coverage',
+//     ignoreCoveragePattern: ['.test.', '.snap'],
+//     // coverageFilesPath: '.nyc_output/out.json',
+//     coverageFilesPath: './.nyc_output/out.json',
+//   },
+// ];
+
+// codeCoverage(defaultPluginOptions);
+
+// // import { schedule } from 'danger';
+// // import { istanbulCoverage } from 'danger-plugin-istanbul-coverage';
 
 // schedule(
 //   istanbulCoverage({
